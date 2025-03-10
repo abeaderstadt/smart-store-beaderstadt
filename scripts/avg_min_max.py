@@ -1,7 +1,11 @@
 import pandas as pd
+import os
 
+# Set the path 
+csv_file_path = os.path.join('C:', 'Projects', 'smart-store-beaderstadt', 'data', 'raw', 'sales_data.csv')
 
-data = pd.read_csv('sales_data.csv')
+# Read the CSV file 
+data = pd.read_csv(csv_file_path)
 
 # Calculate the average, minimum, and maximum SaleAmount
 avg_sales = data['SaleAmount'].mean()
