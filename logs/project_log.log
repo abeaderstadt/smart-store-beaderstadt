@@ -1,0 +1,6 @@
+2025-03-14 07:01:58.983 | INFO     | __main__:main:41 - STARTING logger.py
+2025-03-14 07:01:58.986 | INFO     | __main__:log_example:34 - This is an example info message.
+2025-03-14 07:01:58.987 | WARNING  | __main__:log_example:35 - This is an example warning message.
+2025-03-14 07:01:58.987 | ERROR    | __main__:log_example:36 - This is an example error message.
+2025-03-14 07:01:58.988 | INFO     | __main__:main:46 - View the log output at C:\Projects\smart-store-beaderstadt\logs\project_log.log
+2025-03-14 07:01:58.988 | INFO     | __main__:main:47 - EXITING logger.py.
