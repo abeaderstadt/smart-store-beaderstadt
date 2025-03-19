@@ -201,7 +201,11 @@ seaborn
 
 # Streaming data processing framework (~200-250 MB)
 # Currently requires Python <3.12, e.g. 3.11
-#pyspark<4.0.0
+#pyspark<4.0.0.dev1
+#pyspark[sql]
+
+# Optional utility program to verify .venv and requirements
+git+https://github.com/denisecase/datafun-venv-checker.git#egg=datafun_venv_checker
 
 # Alternative lightweight parallel computing framework
 #dask  
