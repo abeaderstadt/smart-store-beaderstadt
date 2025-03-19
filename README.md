@@ -1,9 +1,9 @@
 # smart-store-beaderstadt
-# Specification for Project 1 BI Python Module
+# Specification for Project 2 BI Python w/External Packages Module
 
 ## Overview
 
-Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code. 
+Project 2 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code. 
 
 ---
 ## **How to Install and Run the Project**
@@ -46,6 +46,7 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 ### **3. Install Dependencies As Needed:**
   - py -m pip install -r requirements.txt
 ### **4. Run Scripts as needed:**
+  - select python interpreter for your local venv
   - py myfile.py   
 ### **5. Run Jupyter Notebooks as needed:**
  - click the kernel selector in the top-right corner of the notebook editor and choose the interpreter associated with your .venv.
@@ -61,7 +62,8 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
 ---
 
-  # P1 Specifications
+  # P2 Specifications
+  # Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 ---
 ## Task 1: Plan Your Project
 - Before you start coding, spend some time planning your project. Consider what the goals are, what data you will need, and how you will structure your code and files.
@@ -110,3 +112,13 @@ Highest/lowest product price?
 Estimate: Avg, Min, Max sales?
 Any data issues?
 
+## Task 6: Add Utility & Script Files
+- In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
+- create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
+- In VS Code, use File / New Folder to create a new folder named scripts to hold your scripts.
+- create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
+
+## Task 7: Execute Python Script 
+- Use the terminal to run the initial data_prep.py script provided. 
+- py scripts\data_prep.py
+- 
