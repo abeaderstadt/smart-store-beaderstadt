@@ -18,4 +18,4 @@ __pycache__/
 .vscode/*
 !.vscode/settings.json  # Include project-specific settings
 !.vscode/launch.json    # Include project-specific launch configurations if needed
-!.vscode/tasks.js
+!.vscode/tasks.json     # Include project-specific tasks if needed
