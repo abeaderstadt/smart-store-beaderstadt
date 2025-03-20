@@ -5,7 +5,7 @@ CustomerID,Name,Region,JoinDate,LoyaltyPoints,PreferredContactMethod
 1004,Chewbacca,West,11/9/2022,95,Text
 1005,Dr Who,North,8/18/2023,333,Text
 1006,Tiffany James,South,6/7/2021,795,Email
-1007,Susan Johnson,South,6/30/2023,4023,Call
+1007,Susan Johnson,South,6/30/2023,1023,Call
 1008,Tony Stark,North,5/1/2020,876,Email
 1009,Jason Bourne,West,12/1/2020,2234,Text
 1010,Hermione Granger,East,12/9/2022,150,Text
