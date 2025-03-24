@@ -1,53 +1,64 @@
-import pathlib
-import sys
 import pandas as pd
 
-# Set project root dynamically
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent  # Adjusted to go up 2 levels
+# Load raw data
+df = pd.read_csv('data/raw/customers_data.csv')
 
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
+# Initial Data Inspection 
+print("Initial Data Inspection:")
+df.info()          # Check data types and missing values
+print("\nSummary Statistics:")
+print(df.describe()) 
+print("\nFirst 5 Rows of Data:")
+print(df.head())      # Inspect the first few rows
+print("\nRandom Sample of Data:")
+print(df.sample(5))   
 
-from utils.logger import logger  # noqa: E402
-from scripts.data_scrubber import DataScrubber  # noqa: E402
+# Handle Missing Data
+print("\nMissing Data Check:")
+print(df.isnull().sum()) 
 
+# Fill or drop missing values
+df = df.fillna('N/A')  
 
-# Constants
-DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
-RAW_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("raw")
-PREPARED_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("prepared")
+# Handle Name Inconsistencies
+print("\nStandardizing Name Column:")
+df['Name'] = df['Name'].str.strip()    # Strip whitespaces from 'Name'
+df['Name'] = df['Name'].str.lower()    # Convert 'Name' to lowercase 
+df['Name'] = df['Name'].replace('hermione grager', 'hermione granger')  # Fix name typo
 
-def read_raw_data(file_name: str) -> pd.DataFrame:
-    """Read raw data from CSV."""
-    file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
-    return pd.read_csv(file_path)
+# Handle Date Inconsistencies
+print("\nStandardizing JoinDate Format:")
+df['JoinDate'] = pd.to_datetime(df['JoinDate'], errors='coerce')  # Convert 'JoinDate' to datetime
 
-def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
-    """Save cleaned data to CSV."""
-    file_path: pathlib.Path = PREPARED_DATA_DIR.joinpath(file_name)
-    df.to_csv(file_path, index=False)
-    logger.info(f"Data saved to {file_path}")
+# Remove Duplicates - Name and CustomerID
+print("\nDuplicate Rows Check:")
+print(df.duplicated().sum())  
 
-def main() -> None:
-    print("Script started...")  # Debugging print
-    logger.info("========================")
-    logger.info("Starting CUSTOMERS prep")
-    logger.info("========================")
+# Remove duplicates based on 'Name' and 'CustomerID' columns 
+df = df.drop_duplicates(subset=['Name'], keep='first')
+df = df.drop_duplicates(subset=['CustomerID'], keep='first')
 
-    df_customers = read_raw_data("customers_data.csv")
+# Ensure non-negative LoyaltyPoints
+print("\nChecking LoyaltyPoints for Outliers:")
+df['LoyaltyPoints'] = df['LoyaltyPoints'].apply(lambda x: x if x >= 0 else 0)  
 
-    df_customers.columns = df_customers.columns.str.strip()  # Clean column names
-    df_customers = df_customers.drop_duplicates()            # Remove duplicates
+# Standardize PreferredContactMethod
+print("\nStandardizing PreferredContactMethod Column:")
+df['PreferredContactMethod'] = df['PreferredContactMethod'].str.lower()  # Convert 'PreferredContactMethod' to lowercase 
 
-    df_customers['Name'] = df_customers['Name'].str.strip()  # Trim whitespace from column values
-    df_customers = df_customers.dropna(subset=['CustomerID', 'Name'])  # Drop rows missing critical info
-    
-    scrubber_customers = DataScrubber(df_customers)
-    scrubber_customers.check_data_consistency_before_cleaning()
-    scrubber_customers.inspect_data()
-    
-    df_customers = scrubber_customers.handle_missing_data(fill_value="N/A")
-    df_customers = scrubber_customers.parse_dates_to_add_standard_datetime('JoinDate')
-    scrubber_customers.check_data_consistency_after_cleaning()
+# Rename columns 
+df = df.rename(columns={'CustomerID': 'ID'}) 
 
-    save_prepared_data(df_customers, "customers_data_prepared.csv")
+# Reorder columns
+df = df[['ID', 'Name', 'Region', 'JoinDate', 'LoyaltyPoints', 'PreferredContactMethod']] 
+
+# Final Quality Checks
+print("\nFinal Quality Check:")
+df.info() 
+print("\nCleaned Data Head:")
+print(df.head()) 
+
+# Save cleaned data
+df.to_csv('data/prepared/customers_data_prepared.csv', index=False)
+
+print("Data cleaned and saved to 'data/prepared/customers_data_prepared.csv'")
