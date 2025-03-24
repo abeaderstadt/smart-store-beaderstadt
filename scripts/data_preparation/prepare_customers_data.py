@@ -17,7 +17,7 @@ print(df.sample(5))
 print("\nMissing Data Check:")
 print(df.isnull().sum()) 
 
-# Fill or drop missing values
+# Fill missing values
 df = df.fillna('N/A')  
 
 # Handle Name Inconsistencies

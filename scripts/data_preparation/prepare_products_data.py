@@ -17,7 +17,7 @@ print(df.sample(5))
 print("\nMissing Data Check:")
 print(df.isnull().sum()) 
 
-# Fill or drop missing values
+# Fill missing values
 df = df.fillna('N/A') 
 
 # Handle ProductName Inconsistencies
@@ -48,7 +48,6 @@ IQR = Q3 - Q1
 lower_bound = Q1 - 1.5 * IQR
 upper_bound = Q3 + 1.5 * IQR
 df = df[(df['UnitPrice'] >= lower_bound) & (df['UnitPrice'] <= upper_bound)]
-
 
 # Standardize Supplier Column
 print("\nStandardizing Supplier Column:")

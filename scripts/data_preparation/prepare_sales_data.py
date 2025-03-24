@@ -1,58 +1,54 @@
-import pathlib
-import sys
 import pandas as pd
 
-# For local imports, temporarily add project root to Python sys.path
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
+# Load raw data
+df = pd.read_csv('data/raw/sales_data.csv')
 
-# Now we can import local modules
-from utils.logger import logger  # noqa: E402
-from scripts.data_scrubber import DataScrubber  # noqa: E402
+# Initial Data Inspection 
+print("Initial Data Inspection:")
+df.info()          # Check data types and missing values
+print("\nSummary Statistics:")
+print(df.describe()) 
+print("\nFirst 5 Rows of Data:")
+print(df.head())      # Inspect the first few rows
+print("\nRandom Sample of Data:")
+print(df.sample(5))   
 
-# Constants
-DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
-RAW_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("raw")
-PREPARED_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("prepared")
 
-def read_raw_data(file_name: str) -> pd.DataFrame:
-    """Read raw data from CSV."""
-    file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
-    return pd.read_csv(file_path)
+# Handle Missing Data
+print("\nMissing Data Check:")
+print(df.isnull().sum()) 
 
-def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
-    """Save cleaned data to CSV."""
-    file_path: pathlib.Path = PREPARED_DATA_DIR.joinpath(file_name)
-    df.to_csv(file_path, index=False)
-    logger.info(f"Data saved to {file_path}")
+# Fill missing values
+df = df.fillna('N/A')  
 
-def main() -> None:
-    """Main function for pre-processing sales data."""
-    logger.info("========================")
-    logger.info("Starting SALES prep")
-    logger.info("========================")
+# Handle SaleDate Format
+print("\nStandardizing SaleDate Format:")
+df['SaleDate'] = pd.to_datetime(df['SaleDate'], errors='coerce')  # Convert SaleDate to datetime
 
-    df_sales = read_raw_data("sales_data.csv")
+# Handle SaleAmount (Ensure non-negative SaleAmount)
+print("\nChecking SaleAmount for Outliers:")
+df['SaleAmount'] = df['SaleAmount'].apply(lambda x: x if x >= 0 else 0)  
 
-    df_sales.columns = df_sales.columns.str.strip()  # Clean column names
-    df_sales = df_sales.drop_duplicates()            # Remove duplicates
+# Drop rows with DiscountPercent outside the valid range [0, 1]
+df = df[(df['DiscountPercent'] >= 0) & (df['DiscountPercent'] <= 1)]
 
-    df_sales['SaleDate'] = pd.to_datetime(df_sales['SaleDate'], errors='coerce')  # Ensure sale_date is datetime
-    df_sales = df_sales.dropna(subset=['TransactionID', 'SaleDate'])  # Drop rows missing key information
-    
-    scrubber_sales = DataScrubber(df_sales)
-    scrubber_sales.check_data_consistency_before_cleaning()
-    scrubber_sales.inspect_data()
-    
-    df_sales = scrubber_sales.handle_missing_data(fill_value="Unknown")
-    scrubber_sales.check_data_consistency_after_cleaning()
+# Handle State Inconsistencies 
+print("\nStandardizing State Column:")
+df['State'] = df['State'].str.strip().str.lower()  # Convert state names to lowercase and strip any whitespaces
 
-    save_prepared_data(df_sales, "sales_data_prepared.csv")
+# Drop duplicates based on all columns except 'TransactionID', keeping only the first occurrence
+df_cleaned = df.drop_duplicates(subset=df.columns.difference(['TransactionID']).tolist(), keep=False)
 
-    logger.info("======================")
-    logger.info("FINISHED data_prep.py")
-    logger.info("======================")
+# Check the number of remaining duplicates
+print(f"Remaining duplicates after removal: {df_cleaned.duplicated().sum()}")
 
-if __name__ == "__main__":
-    main()
+# Final Quality Checks
+print("\nFinal Quality Check:")
+df_cleaned.info() 
+print("\nCleaned Data Head:")
+print(df_cleaned.head()) 
+
+# Save cleaned data
+df_cleaned.to_csv('data/prepared/sales_data_prepared.csv', index=False)
+
+print("Data cleaned and saved to 'data/prepared/sales_data_prepared.csv'")
