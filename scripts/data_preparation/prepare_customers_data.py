@@ -1,0 +1,53 @@
+import pathlib
+import sys
+import pandas as pd
+
+# Set project root dynamically
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent  # Adjusted to go up 2 levels
+
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.append(str(PROJECT_ROOT))
+
+from utils.logger import logger  # noqa: E402
+from scripts.data_scrubber import DataScrubber  # noqa: E402
+
+
+# Constants
+DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
+RAW_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("raw")
+PREPARED_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("prepared")
+
+def read_raw_data(file_name: str) -> pd.DataFrame:
+    """Read raw data from CSV."""
+    file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
+    return pd.read_csv(file_path)
+
+def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
+    """Save cleaned data to CSV."""
+    file_path: pathlib.Path = PREPARED_DATA_DIR.joinpath(file_name)
+    df.to_csv(file_path, index=False)
+    logger.info(f"Data saved to {file_path}")
+
+def main() -> None:
+    print("Script started...")  # Debugging print
+    logger.info("========================")
+    logger.info("Starting CUSTOMERS prep")
+    logger.info("========================")
+
+    df_customers = read_raw_data("customers_data.csv")
+
+    df_customers.columns = df_customers.columns.str.strip()  # Clean column names
+    df_customers = df_customers.drop_duplicates()            # Remove duplicates
+
+    df_customers['Name'] = df_customers['Name'].str.strip()  # Trim whitespace from column values
+    df_customers = df_customers.dropna(subset=['CustomerID', 'Name'])  # Drop rows missing critical info
+    
+    scrubber_customers = DataScrubber(df_customers)
+    scrubber_customers.check_data_consistency_before_cleaning()
+    scrubber_customers.inspect_data()
+    
+    df_customers = scrubber_customers.handle_missing_data(fill_value="N/A")
+    df_customers = scrubber_customers.parse_dates_to_add_standard_datetime('JoinDate')
+    scrubber_customers.check_data_consistency_after_cleaning()
+
+    save_prepared_data(df_customers, "customers_data_prepared.csv")
