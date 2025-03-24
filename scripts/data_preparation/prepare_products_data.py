@@ -1,50 +1,66 @@
-import pathlib
-import sys
 import pandas as pd
 
-# For local imports, temporarily add project root to Python sys.path
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
+# Load raw data
+df = pd.read_csv('data/raw/products_data.csv')
 
-# Now we can import local modules
-from utils.logger import logger  # noqa: E402
-from scripts.data_scrubber import DataScrubber  # noqa: E402
+# Initial Data Inspection 
+print("Initial Data Inspection:")
+df.info()          # Check data types and missing values
+print("\nSummary Statistics:")
+print(df.describe()) 
+print("\nFirst 5 Rows of Data:")
+print(df.head())      # Inspect the first few rows
+print("\nRandom Sample of Data:")
+print(df.sample(5))   
 
-# Constants
-DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
-RAW_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("raw")
-PREPARED_DATA_DIR: pathlib.Path = DATA_DIR.joinpath("prepared")
+# Handle Missing Data
+print("\nMissing Data Check:")
+print(df.isnull().sum()) 
 
-def read_raw_data(file_name: str) -> pd.DataFrame:
-    """Read raw data from CSV."""
-    file_path: pathlib.Path = RAW_DATA_DIR.joinpath(file_name)
-    return pd.read_csv(file_path)
+# Fill or drop missing values
+df = df.fillna('N/A') 
 
-def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
-    """Save cleaned data to CSV."""
-    file_path: pathlib.Path = PREPARED_DATA_DIR.joinpath(file_name)
-    df.to_csv(file_path, index=False)
-    logger.info(f"Data saved to {file_path}")
+# Handle ProductName Inconsistencies
+print("\nStandardizing ProductName Column:")
+df['ProductName'] = df['ProductName'].str.strip()    # Strip whitespaces from 'ProductName'
+df['ProductName'] = df['ProductName'].str.lower()    # Convert 'ProductName' to lowercase
 
-def main() -> None:
-    """Main function for pre-processing product data."""
-    logger.info("========================")
-    logger.info("Starting PRODUCTS prep")
-    logger.info("========================")
+# Handle YearAdded Inconsistencies 
+print("\nStandardizing YearAdded Format:")
+df['YearAdded'] = pd.to_datetime(df['YearAdded'], errors='coerce').dt.year  
 
-    df_products = read_raw_data("products_data.csv")
+# Remove Duplicates - ProductName and ProductID
+print("\nDuplicate Rows Check:")
+print(df.duplicated().sum())  
 
-    df_products.columns = df_products.columns.str.strip()  # Clean column names
-    df_products = df_products.drop_duplicates()            # Remove duplicates
+# Remove duplicates based on 'ProductName' and 'ProductID' columns 
+df = df.drop_duplicates(subset=['ProductName'], keep='first')
+df = df.drop_duplicates(subset=['ProductID'], keep='first')
 
-    df_products['ProductName'] = df_products['ProductName'].str.strip()  # Trim whitespace from column values
-    
-    scrubber_products = DataScrubber(df_products)
-    scrubber_products.check_data_consistency_before_cleaning()
-    scrubber_products.inspect_data()
+# Ensure non-negative UnitPrice 
+print("\nChecking UnitPrice for Outliers:")
+df['UnitPrice'] = df['UnitPrice'].apply(lambda x: x if x >= 0 else 0)  
 
-    scrubber_products.check_data_consistency_after_cleaning()
-    save_prepared_data(df_products, "products_data_prepared.csv")
+# Filter UnitPrice outliers
+Q1 = df['UnitPrice'].quantile(0.25)
+Q3 = df['UnitPrice'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+df = df[(df['UnitPrice'] >= lower_bound) & (df['UnitPrice'] <= upper_bound)]
 
-    
+
+# Standardize Supplier Column
+print("\nStandardizing Supplier Column:")
+df['Supplier'] = df['Supplier'].str.strip().str.lower()  
+
+# Final Quality Checks
+print("\nFinal Quality Check:")
+df.info() 
+print("\nCleaned Data Head:")
+print(df.head()) 
+
+# Save cleaned data
+df.to_csv('data/prepared/products_data_prepared.csv', index=False)
+
+print("Data cleaned and saved to 'data/prepared/products_data_prepared.csv'")

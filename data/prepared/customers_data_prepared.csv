@@ -1,4 +1,4 @@
-ID,Name,Region,JoinDate,LoyaltyPoints,PreferredContactMethod
+CustomerID,Name,Region,JoinDate,LoyaltyPoints,PreferredContactMethod
 1001,william white,East,2021-11-11,1256,text
 1002,wylie coyote,East,2023-02-14,105,call
 1003,dan brown,West,2023-10-19,876,email

@@ -46,12 +46,6 @@ df['LoyaltyPoints'] = df['LoyaltyPoints'].apply(lambda x: x if x >= 0 else 0)
 print("\nStandardizing PreferredContactMethod Column:")
 df['PreferredContactMethod'] = df['PreferredContactMethod'].str.lower()  # Convert 'PreferredContactMethod' to lowercase 
 
-# Rename columns 
-df = df.rename(columns={'CustomerID': 'ID'}) 
-
-# Reorder columns
-df = df[['ID', 'Name', 'Region', 'JoinDate', 'LoyaltyPoints', 'PreferredContactMethod']] 
-
 # Final Quality Checks
 print("\nFinal Quality Check:")
 df.info() 
