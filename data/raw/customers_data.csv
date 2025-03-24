@@ -3,10 +3,10 @@ CustomerID,Name,Region,JoinDate,LoyaltyPoints,PreferredContactMethod
 1002,Wylie Coyote,East,2/14/2023,105,Call
 1003,Dan Brown,West,10/19/2023,876,Email
 1004,Chewbacca,West,11/9/2022,95,Text
-1005,Dr Who,North,8/18/2023,333,Text
+1005,Dr Who,North,8/18/2023,333,
 1006,Tiffany James,South,6/7/2021,795,Email
 1007,Susan Johnson,South,6/30/2023,4023,Call
 1008,Tony Stark,North,5/1/2020,876,Email
-1009,Jason Bourne,West,12/1/2020,2234,Text
+1009,Jason Bourne,West,12/1/2020,2234,
 1010,Hermione Granger,East,12/9/2022,150,Text
 1011,Hermione Grager,East,12/9/2022,653,Email
