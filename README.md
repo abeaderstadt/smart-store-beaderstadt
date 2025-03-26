@@ -1,9 +1,9 @@
 # smart-store-beaderstadt
-# Specification for Project 2 BI Python w/External Packages Module
+# Specification for Project 3 - Preparing Data for ETL
 
 ## Overview
 
-Project 2 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code. 
+In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
 
 ---
 ## **How to Install and Run the Project**
@@ -62,11 +62,11 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
 ---
 
-  # P2 Specifications
+  # P1 Specifications
   # Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 ---
 ## Task 1: Plan Your Project
-- Before you start coding, spend some time planning your project. Consider what the goals are, what data you will need, and how you will structure your code and files.
+- Before you start coding, spend some time planning your project. 
 - We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
 
 
@@ -111,14 +111,27 @@ Most common customer location?
 Highest/lowest product price?
 Estimate: Avg, Min, Max sales?
 Any data issues?
-
+---
+  # P2 Specifications
 ## Task 6: Add Utility & Script Files
 - In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
 - create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
 - In VS Code, use File / New Folder to create a new folder named scripts to hold your scripts.
 - create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
-
-## Task 7: Execute Python Script 
-- Use the terminal to run the initial data_prep.py script provided. 
+---
+   # P3 Specifications
+ ## Task 8: Practice Reusable Cleaning with a DataScrubber Class
+ - Create the following file in your project: scripts/data_scrubber.py 
+ - Copy and paste the content from the module 3 repo (https://github.com/denisecase/smart-sales-docs/)
+ - Complete the remaining TODO items in this script.
+  
+ ## Task 9: Test the DataScrubber Class
+ - Create the following folder and file for this in your project:tests/test_data_scrubber.py
+ - Copy and paste the content from the module 3 repo linked above.
+ - Use the terminal to run the test_data_scrubber.py script.
+ - py tests\test_data_scrubber.py
+  
+## Task 10: Use Your Data Scrubber
+- Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
+- Use the terminal to run the data_prep.py script.
 - py scripts\data_prep.py
-- 
