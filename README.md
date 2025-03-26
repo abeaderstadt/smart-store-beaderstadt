@@ -115,18 +115,18 @@ smart-store-yourname/
 - create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
 ---
    # P3 Specifications
- ## Task 8: Practice Reusable Cleaning with a DataScrubber Class
+ ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
  - Create the following file in your project: scripts/data_scrubber.py 
  - Copy and paste the content from the module 3 repo (https://github.com/denisecase/smart-sales-docs/)
  - Complete the remaining TODO items in this script.
   
- ## Task 9: Test the DataScrubber Class
+ ## Task 8: Test the DataScrubber Class
  - Create the following folder and file for this in your project:tests/test_data_scrubber.py
  - Copy and paste the content from the module 3 repo linked above.
  - Use the terminal to run the test_data_scrubber.py script.
  - py tests\test_data_scrubber.py
   
-## Task 10: Use Your Data Scrubber
+## Task 9: Use Your Data Scrubber
 - Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
 - Use the terminal to run the data_prep.py script.
 - py scripts\data_prep.py
