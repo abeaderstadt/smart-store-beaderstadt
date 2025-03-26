@@ -100,9 +100,9 @@ smart-store-yourname/
 - For best results, be sure the file names are exactly the same.
 - When finished, in your data/raw folder, you should have with some raw sample data in each:
 
-- customers_data.csv
-- products_data.csv
-- sales_data.csv
+    - customers_data.csv
+    - products_data.csv
+    - sales_data.csv
 
 ## Task 5: Explore the Data
 - Before using tools, examine the data manually. Open the CSV files and make a few observations:
