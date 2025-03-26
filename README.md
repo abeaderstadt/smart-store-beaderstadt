@@ -106,11 +106,6 @@ smart-store-yourname/
 
 ## Task 5: Explore the Data
 - Before using tools, examine the data manually. Open the CSV files and make a few observations:
-
-Most common customer location?
-Highest/lowest product price?
-Estimate: Avg, Min, Max sales?
-Any data issues?
 ---
   # P2 Specifications
 ## Task 6: Add Utility & Script Files
