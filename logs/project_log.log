@@ -45,3 +45,21 @@
 2025-03-24 11:47:13.177 | INFO     | __main__:main:36 - ========================
 2025-03-24 11:47:13.178 | INFO     | __main__:main:37 - Starting CUSTOMERS prep
 2025-03-24 11:47:13.178 | INFO     | __main__:main:38 - ========================
+2025-03-25 20:18:26.974 | INFO     | __main__:main:59 - ======================
+2025-03-25 20:18:26.975 | INFO     | __main__:main:60 - STARTING data_prep.py
+2025-03-25 20:18:26.976 | INFO     | __main__:main:61 - ======================
+2025-03-25 20:18:26.976 | INFO     | __main__:main:63 - ========================
+2025-03-25 20:18:26.977 | INFO     | __main__:main:64 - Starting CUSTOMERS prep
+2025-03-25 20:18:26.977 | INFO     | __main__:main:65 - ========================
+2025-03-25 20:18:27.060 | INFO     | __main__:save_prepared_data:55 - Data saved to C:\Projects\smart-store-beaderstadt\data\prepared\customers_data_prepared.csv
+2025-03-25 20:18:27.060 | INFO     | __main__:main:85 - ========================
+2025-03-25 20:18:27.060 | INFO     | __main__:main:86 - Starting PRODUCTS prep
+2025-03-25 20:18:27.060 | INFO     | __main__:main:87 - ========================
+2025-03-25 20:18:27.093 | INFO     | __main__:save_prepared_data:55 - Data saved to C:\Projects\smart-store-beaderstadt\data\prepared\products_data_prepared.csv
+2025-03-25 20:18:27.093 | INFO     | __main__:main:103 - ========================
+2025-03-25 20:18:27.093 | INFO     | __main__:main:104 - Starting SALES prep
+2025-03-25 20:18:27.094 | INFO     | __main__:main:105 - ========================
+2025-03-25 20:18:27.137 | INFO     | __main__:save_prepared_data:55 - Data saved to C:\Projects\smart-store-beaderstadt\data\prepared\sales_data_prepared.csv
+2025-03-25 20:18:27.139 | INFO     | __main__:main:124 - ======================
+2025-03-25 20:18:27.139 | INFO     | __main__:main:125 - FINISHED data_prep.py
+2025-03-25 20:18:27.139 | INFO     | __main__:main:126 - ======================
