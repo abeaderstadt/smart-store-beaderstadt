@@ -1,5 +1,5 @@
 # smart-store-beaderstadt
-# Specification for Project 3 - Preparing Data for ETL
+# Project 3 - Preparing Data for ETL
 
 ## Overview
 
