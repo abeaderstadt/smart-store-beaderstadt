@@ -1,3 +1,10 @@
+"""
+Module 3: Data Preparation Script
+File: scripts/data_preparation/prepare_customers_data.py
+
+This script was created prior to learning about, and utilizing the data_scrubber.py file. This script was not actually used 
+to clean the data for this project. I am keeping this as an example for myself as to why a data scrubber is important.
+"""
 import pandas as pd
 
 # Load raw data
