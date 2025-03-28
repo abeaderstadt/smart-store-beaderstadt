@@ -1,4 +1,4 @@
-ProductID,ProductName,Category,UnitPrice,YearAdded,Supplier
+product_id,product_name,category,unit_price,year_added,supplier
 101,laptop,Electronics,793.12,2012,Apple
 102,hoodie,Clothing,39.1,2018,Nike
 103,cable,Electronics,22.76,2023,Dell
