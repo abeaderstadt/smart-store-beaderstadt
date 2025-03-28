@@ -110,7 +110,7 @@ smart-store-yourname/
 - Before using tools, examine the data manually. Open the CSV files and make a few observations:
 ---
   # P2 Specifications
-  Project 2 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code. 
+  In Project 2 we continue to initialize a business intelligence data analytics project. Our goal is to get acquainted with these powerful tools and key files so we'll feel a bit more comfortable joining a Git-based team.
 
 ## Task 6: Add Utility & Script Files
 - In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
