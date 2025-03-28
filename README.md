@@ -1,9 +1,10 @@
 # smart-store-beaderstadt
-# Project 3 - Preparing Data for ETL
+# Project 4 - Create and Populate DW
 
 ## Overview
 
-In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
+In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
+We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
 
 ---
 ## **How to Install and Run the Project**
@@ -63,6 +64,7 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 ---
 
   # P1 Specifications
+  Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
   # Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 ---
 ## Task 1: Plan Your Project
@@ -108,6 +110,8 @@ smart-store-yourname/
 - Before using tools, examine the data manually. Open the CSV files and make a few observations:
 ---
   # P2 Specifications
+  Project 2 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code. 
+
 ## Task 6: Add Utility & Script Files
 - In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
 - create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
@@ -115,6 +119,7 @@ smart-store-yourname/
 - create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
 ---
    # P3 Specifications
+   In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
  ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
  - Create the following file in your project: scripts/data_scrubber.py 
  - Copy and paste the content from the module 3 repo (https://github.com/denisecase/smart-sales-docs/)
@@ -130,3 +135,24 @@ smart-store-yourname/
 - Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
 - Use the terminal to run the data_prep.py script.
 - py scripts\data_prep.py
+- ---
+   # P4 Specifications
+   In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
+   We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
+## Task 10:  Plan Your Data Warehouse
+- Design Your Data Warehouse Schema
+- Determine the most suitable schema for your data warehouse (Hint: We use Star Warehouse in this example)
+- Sketch out the tables
+
+## Task 11: Define, Create, and Populate Your DW Schema
+- Create a 'scripts' subfolder named 'dw_scripts'
+- Create a file inside named etl_to_dw.py (it can do all steps together).
+- Create a file inside named create_tables.sql (for debugging I chose to build and test my SQL first and keep them separate, but either way works.)
+- Contents of both files was copy and pasted from course website.
+- Adjused this to reflect my tables, columns, and their appropriate data types. 
+
+## Task 12:  Validate the Data Warehouse
+- Use the terminal to run the etl_to_dw.py file.
+- py scripts/dw_scripts/etl_to_dw.py
+- Ensure the schema is correctly implemented and that the structure meets your design expectations. 
+
