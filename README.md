@@ -1,10 +1,9 @@
 # smart-store-beaderstadt
-# Project 4 - Create and Populate DW
+# Project 5 - Cross-Platform Reporting with Power BI
 
 ## Overview
 
-In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
-We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
+In Project 5, we will use Power BI Desktop to apply core BI techniques (slicing, dicing, and drilldown) and generate interactive visualizations to explore business performance. This project reinforces key data analysis and reporting skills used across industries.
 
 ---
 ## **How to Install and Run the Project**
@@ -155,4 +154,34 @@ smart-store-yourname/
 - Use the terminal to run the etl_to_dw.py file.
 - py scripts/dw_scripts/etl_to_dw.py
 - Ensure the schema is correctly implemented and that the structure meets your design expectations. 
+- - ---
+   # P5 Specifications
+   In Project 5, we will use Power BI Desktop to apply core BI techniques (slicing, dicing, and drilldown) and generate interactive visualizations to explore business performance. This project reinforces key data analysis and reporting skills used across industries.
+
+   ### SQL Queries & Reports
+
+- **Top Customers Query**: Used a JOIN between `sales` and `customers`, grouped by customer name, and summed total spent.
+- **Sales by Product & Region**: Created a Matrix visual to dice data by category (Rows) and supplier (Columns), with the values representing the count of unit_price.
+- **Sales Trends Drilldown**: Used hierarchy (Year > Quarter > Month) to explore sales over time using a column chart.
+
+### Dashboard Design Choices
+
+- Used **slicer** to filter by sale date, providing flexible time-based analysis.
+- Added **bar chart** to display top customers by total spending.
+- Created **matrix visualization** for clear cross-section of product category and region.
+- Added **column chart** to explore sales over time using a hierarchy (Year > Quarter > Month).
+- Used a **line chart** with drilldown to explore sales trends across time.
+- Used **slicer** to focus on specific product categories across all visuals
+- Added color-coded visuals to improve interactivity and clarity.
+
+### Power BI Model View
+![Model View](screenshots/model_view.png)
+
+### Query Results
+![Query Results](screenshots/query_results.png)
+
+### Final Dashboard
+![Final Dashboard](screenshots/dashboard.png)
+
+
 
