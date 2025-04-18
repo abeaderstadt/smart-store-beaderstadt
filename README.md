@@ -67,47 +67,47 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
   Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
   - Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 
-      ## Task 1: Plan Your Project
-      - Before you start coding, spend some time planning your project. 
-      - We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
+## Task 1: Plan Your Project
+- Before you start coding, spend some time planning your project. 
+- We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
 
 
-      ## Task 2: Complete/Verify Initialization
-      - Follow the above step-by-step instructions to initialize a new Python project.
-      - Hint: you should have both a GitHub repo (which you created with a default README.md) and have cloned it down to your machine, added useful files, done a git add-commit-push to GitHub and created a project virtual environment for Python. 
+## Task 2: Complete/Verify Initialization
+- Follow the above step-by-step instructions to initialize a new Python project.
+- Hint: you should have both a GitHub repo (which you created with a default README.md) and have cloned it down to your machine, added useful files, done a git add-commit-push to GitHub and created a project virtual environment for Python. 
 
-      ## Task 3: Organize Your Project Folder
-      - Open the project in VS Code or use your computer's file management program to organize your project professionally. For now, just organize the project this way. Files will be mostly empty - we'll add contents later.
+## Task 3: Organize Your Project Folder
+- Open the project in VS Code or use your computer's file management program to organize your project professionally. For now, just organize the project this way. Files will be mostly empty - we'll add contents later.
 
-      smart-store-yourname/   
-      │
-      ├── data/                
-      │   ├── raw/                          
-      │
-      ├── scripts/                            
-      │
-      ├── utils/                     
-      │   └── logger.py              
-      │
-      ├── .gitignore                 
-      ├── README.md                  
-      └── requirements.txt     
+smart-store-yourname/   
+│
+├── data/                
+│   ├── raw/                          
+│
+├── scripts/                            
+│
+├── utils/                     
+│   └── logger.py              
+│
+├── .gitignore                 
+├── README.md                  
+└── requirements.txt     
 
-      - First, create the folders. Follow capitalization (all lower case), spelling, and spacing, EXACTLY. 
-      - In your project repository, create the data folder first as show above. In the data folder, create a folder named raw (if it doesn't exist yet). 
+- First, create the folders. Follow capitalization (all lower case), spelling, and spacing, EXACTLY. 
+- In your project repository, create the data folder first as show above. In the data folder, create a folder named raw (if it doesn't exist yet). 
 
-      ## Task 4: Add Sample Data
-      - Use the sample data files provided in this repository: https://github.com/denisecase/smart-sales-raw-dataLinks to an external site. to your data/raw folder.
-      - Either download these files and put them in your data/raw folder, or create new empty files and copy and paste the contents into each. 
-      - For best results, be sure the file names are exactly the same.
-      - When finished, in your data/raw folder, you should have with some raw sample data in each:
+## Task 4: Add Sample Data
+- Use the sample data files provided in this repository: https://github.com/denisecase/smart-sales-raw-dataLinks to an external site. to your data/raw folder.
+- Either download these files and put them in your data/raw folder, or create new empty files and copy and paste the contents into each. 
+- For best results, be sure the file names are exactly the same.
+- When finished, in your data/raw folder, you should have with some raw sample data in each:
 
-          - customers_data.csv
-          - products_data.csv
-          - sales_data.csv
+    - customers_data.csv
+    - products_data.csv
+    - sales_data.csv
 
-      ## Task 5: Explore the Data
-      - Before using tools, examine the data manually. Open the CSV files and make a few observations:
+## Task 5: Explore the Data
+- Before using tools, examine the data manually. Open the CSV files and make a few observations:
 
 ---
 
@@ -115,32 +115,32 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
   In Project 2 we continue to initialize a business intelligence data analytics project. Our goal is to get acquainted with these powerful tools and key files so we'll feel a bit more comfortable joining a Git-based team.
 
-      ## Task 6: Add Utility & Script Files
-      - In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
-      - create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
-      - In VS Code, use File / New Folder to create a new folder named scripts to hold your scripts.
-      - create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
+## Task 6: Add Utility & Script Files
+- In VS Code, use File / New Folder to create a new folder named utils to hold your utility scripts.
+- create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
+- In VS Code, use File / New Folder to create a new folder named scripts to hold your scripts.
+- create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
 
 ---
 
    # P3 Specifications
 
    In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
-      ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
-      - Create the following file in your project: scripts/data_scrubber.py 
-      - Copy and paste the content from the module 3 repo (https://github.com/denisecase/smart-sales-docs/)
-      - Complete the remaining TODO items in this script.
-        
-      ## Task 8: Test the DataScrubber Class
-      - Create the following folder and file for this in your project:tests/test_data_scrubber.py
-      - Copy and paste the content from the module 3 repo linked above.
-      - Use the terminal to run the test_data_scrubber.py script.
-      - py tests\test_data_scrubber.py
-        
-      ## Task 9: Use Your Data Scrubber
-      - Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
-      - Use the terminal to run the data_prep.py script.
-      - py scripts\data_prep.py
+ ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
+ - Create the following file in your project: scripts/data_scrubber.py 
+ - Copy and paste the content from the module 3 repo (https://github.com/denisecase/smart-sales-docs/)
+ - Complete the remaining TODO items in this script.
+  
+ ## Task 8: Test the DataScrubber Class
+ - Create the following folder and file for this in your project:tests/test_data_scrubber.py
+ - Copy and paste the content from the module 3 repo linked above.
+ - Use the terminal to run the test_data_scrubber.py script.
+ - py tests\test_data_scrubber.py
+  
+## Task 9: Use Your Data Scrubber
+- Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
+- Use the terminal to run the data_prep.py script.
+- py scripts\data_prep.py
 
 ---
 
@@ -148,22 +148,22 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
    In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
    We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
-      ## Task 10:  Plan Your Data Warehouse
-      - Design Your Data Warehouse Schema
-      - Determine the most suitable schema for your data warehouse (Hint: We use Star Warehouse in this example)
-      - Sketch out the tables
+## Task 10:  Plan Your Data Warehouse
+- Design Your Data Warehouse Schema
+- Determine the most suitable schema for your data warehouse (Hint: We use Star Warehouse in this example)
+- Sketch out the tables
 
-      ## Task 11: Define, Create, and Populate Your DW Schema
-      - Create a 'scripts' subfolder named 'dw_scripts'
-      - Create a file inside named etl_to_dw.py (it can do all steps together).
-      - Create a file inside named create_tables.sql (for debugging I chose to build and test my SQL first and keep them separate, but either way works.)
-      - Contents of both files was copy and pasted from course website.
-      - Adjused this to reflect my tables, columns, and their appropriate data types. 
+## Task 11: Define, Create, and Populate Your DW Schema
+- Create a 'scripts' subfolder named 'dw_scripts'
+- Create a file inside named etl_to_dw.py (it can do all steps together).
+- Create a file inside named create_tables.sql (for debugging I chose to build and test my SQL first and keep them separate, but either way works.)
+- Contents of both files was copy and pasted from course website.
+- Adjused this to reflect my tables, columns, and their appropriate data types. 
 
-      ## Task 12:  Validate the Data Warehouse
-      - Use the terminal to run the etl_to_dw.py file.
-      - py scripts/dw_scripts/etl_to_dw.py
-      - Ensure the schema is correctly implemented and that the structure meets your design expectations. 
+## Task 12:  Validate the Data Warehouse
+- Use the terminal to run the etl_to_dw.py file.
+- py scripts/dw_scripts/etl_to_dw.py
+- Ensure the schema is correctly implemented and that the structure meets your design expectations. 
 
 ---
 
@@ -173,89 +173,89 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
    ### SQL Queries & Reports
 
-      - **Top Customers Query**: Used a JOIN between `sales` and `customers`, grouped by customer name, and summed total spent.
-      - **Sales by Product & Region**: Created a Matrix visual to dice data by category (Rows) and supplier (Columns), with the values representing the count of unit_price.
-      - **Sales Trends Drilldown**: Used hierarchy (Year > Quarter > Month) to explore sales over time using a column chart.
+- **Top Customers Query**: Used a JOIN between `sales` and `customers`, grouped by customer name, and summed total spent.
+- **Sales by Product & Region**: Created a Matrix visual to dice data by category (Rows) and supplier (Columns), with the values representing the count of unit_price.
+- **Sales Trends Drilldown**: Used hierarchy (Year > Quarter > Month) to explore sales over time using a column chart.
 
-      ### Dashboard Design Choices
+### Dashboard Design Choices
 
-      - Used **slicer** to filter by sale date, providing flexible time-based analysis.
-      - Added **bar chart** to display top customers by total spending.
-      - Created **matrix visualization** for clear cross-section of product category and region.
-      - Added **column chart** to explore sales over time using a hierarchy (Year > Quarter > Month).
-      - Used a **line chart** with drilldown to explore sales trends across time.
-      - Used **slicer** to focus on specific product categories across all visuals
-      - Added color-coded visuals to improve interactivity and clarity.
+- Used **slicer** to filter by sale date, providing flexible time-based analysis.
+- Added **bar chart** to display top customers by total spending.
+- Created **matrix visualization** for clear cross-section of product category and region.
+- Added **column chart** to explore sales over time using a hierarchy (Year > Quarter > Month).
+- Used a **line chart** with drilldown to explore sales trends across time.
+- Used **slicer** to focus on specific product categories across all visuals
+- Added color-coded visuals to improve interactivity and clarity.
 
-      ### Power BI Model View
-      ![Model View](screenshots/model_view.png)
+### Power BI Model View
+![Model View](screenshots/model_view.png)
 
-      ### Query Results
-      ![Query Results](screenshots/query_results.png)
+### Query Results
+![Query Results](screenshots/query_results.png)
 
-      ### Final Dashboard
-      ![Final Dashboard](screenshots/dashboard.png)
+### Final Dashboard
+![Final Dashboard](screenshots/dashboard.png)
 
 ---
 
    # P6 Specifications
-
+   
    In Project 6, we explored OLAP (Online Analytical Processing) techniques to better understand customer purchasing behavior. This notebook based project focused on querying a data warehouse and analyzing spending patterns by customer and product.
 
-      ## Section 1: The Business Goal
-      - CUSTOMER_TOTAL_PURCHASES_BY_PRODUCT
-      - How much does each customer spend on individual products?
-      - This question helps identify high value customers and the specific products they purchase. 
-      - These insights are valuable for personalized promotions, customer retention, and inventory planning.
+## Section 1: The Business Goal
+- CUSTOMER_TOTAL_PURCHASES_BY_PRODUCT
+- How much does each customer spend on individual products?
+- This question helps identify high value customers and the specific products they purchase. 
+- These insights are valuable for personalized promotions, customer retention, and inventory planning.
 
-      ## Section 2: Data Source
-      - Prepared data from my SQLite3 data warehouse, which was designed and loaded in Project 4 was used.
-      The primary table used was:
-      sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_amount, sale_date, discount_percentage, and state.
-      - focused on:
-        - customer_id
-        - product_id
-        - sale_amount (used as the total dollar amount for each purchase)
-      - joined with:
-        - customers_df: to retrieve customer names
-        - products_df: to retrieve product names
+## Section 2: Data Source
+- Prepared data from my SQLite3 data warehouse, which was designed and loaded in Project 4 was used.
+The primary table used was:
+sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_amount, sale_date, discount_percentage, and state.
+- focused on:
+  - customer_id
+  - product_id
+  - sale_amount (used as the total dollar amount for each purchase)
+- joined with:
+  - customers_df: to retrieve customer names
+  - products_df: to retrieve product names
 
-      ## Section 3: Tools
-      - Jupyter Notebook: Used for querying, analyzing, and visualizing data in Python. Chosen for its flexibility and because I'm comfortable working in it.
-      - Pandas: For grouping, joining, and aggregating data.
-      - Matplotlib & Seaborn: For visualizing purchase patterns.
+## Section 3: Tools
+- Jupyter Notebook: Used for querying, analyzing, and visualizing data in Python. Chosen for its flexibility and because I'm comfortable working in it.
+- Pandas: For grouping, joining, and aggregating data.
+- Matplotlib & Seaborn: For visualizing purchase patterns.
 
-      ## Section 4: Workflow & Logic
-      - Connect to the Data Warehouse using sqlite3.
-      - Load and join tables: customers, products, and sales data.
-      - Group by customer and product.
-      - Sum the sale_amount to calculate total purchases.
-      - Sort the results to highlight high-spending customers.
-      - Visualize the data with tables and bar charts.
-      - Key dimensions:
-        - Customer
-        - Product
-      - Key aggregation:
-        - SUM of sale_amount
+## Section 4: Workflow & Logic
+- Connect to the Data Warehouse using sqlite3.
+- Load and join tables: customers, products, and sales data.
+- Group by customer and product.
+- Sum the sale_amount to calculate total purchases.
+- Sort the results to highlight high-spending customers.
+- Visualize the data with tables and bar charts.
+- Key dimensions:
+  - Customer
+  - Product
+- Key aggregation:
+  - SUM of sale_amount
 
-      ## Section 5: Results
-      - Customers 1001 and 1010 spent the most across multiple products.
-      - The 'laptop' product stands out as the highest total spend among customers.
+## Section 5: Results
+- Customers 1001 and 1010 spent the most across multiple products.
+- The 'laptop' product stands out as the highest total spend among customers.
 
-      Screenshot of OLAP Result
+Screenshot of OLAP Result
 
-      ![OLAP Result](screenshots/olap_query_visualization.png)
-      (This chart shows total purchase amount per customer by product.)
+![OLAP Result](screenshots/olap_query_visualization.png)
+(This chart shows total purchase amount per customer by product.)
 
-      ## Section 6: Suggested Business Action
-      - Target high-spending customers with loyalty rewards or personalized offers.
-      - Bundle frequently purchased products or recommend similar items to increase average order size.
-      - Use purchase trends to improve inventory and campaign planning.
+## Section 6: Suggested Business Action
+- Target high-spending customers with loyalty rewards or personalized offers.
+- Bundle frequently purchased products or recommend similar items to increase average order size.
+- Use purchase trends to improve inventory and campaign planning.
 
-      ## Section 7: Challenges
-      - I initially considered using Power BI, but opted for Jupyter due to familiarity and control over data manipulation.
-      - Took extra care to ensure join logic and aggregations were correct.
-      - Making the visualS easy to read required a few formatting tweaks with pivot tables and bar charts.
+## Section 7: Challenges
+- I initially considered using Power BI, but opted for Jupyter due to familiarity and control over data manipulation.
+- Took extra care to ensure join logic and aggregations were correct.
+- Making the visualS easy to read required a few formatting tweaks with pivot tables and bar charts.
 
 
 
