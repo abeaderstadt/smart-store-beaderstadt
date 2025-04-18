@@ -1,9 +1,9 @@
 # smart-store-beaderstadt
-# Project 5 - Cross-Platform Reporting with Power BI
+# Project 6 - BI Insights and Storytelling
 
 ## Overview
 
-In Project 5, we will use Power BI Desktop to apply core BI techniques (slicing, dicing, and drilldown) and generate interactive visualizations to explore business performance. This project reinforces key data analysis and reporting skills used across industries.
+Project 6 focuses on leveraging OLAP, cubing concepts, and techniques like slicing, dicing, and drilldown to uncover specific analytic insights for a particular business objective.
 
 ---
 ## **How to Install and Run the Project**
@@ -182,6 +182,64 @@ smart-store-yourname/
 
 ### Final Dashboard
 ![Final Dashboard](screenshots/dashboard.png)
+- - ---
+   # P6 Specifications
+   In Project 6, we explored OLAP (Online Analytical Processing) techniques to better understand customer purchasing behavior. This notebook based project focused on querying a data warehouse and analyzing spending patterns by customer and product.
+
+## Section 1: The Business Goal
+- CUSTOMER_TOTAL_PURCHASES_BY_PRODUCT
+- How much does each customer spend on individual products?
+- This question helps identify high value customers and the specific products they purchase. 
+- These insights are valuable for personalized promotions, customer retention, and inventory planning.
+
+## Section 2: Data Source
+- Prepared data from my SQLite3 data warehouse, which was designed and loaded in Project 4 was used.
+The primary table used was:
+sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_amount, sale_date, discount_percentage, and state.
+- focused on:
+  - customer_id
+  - product_id
+  - sale_amount (used as the total dollar amount for each purchase)
+- joined with:
+  - customers_df: to retrieve customer names
+  - products_df: to retrieve product names
+
+## Section 3: Tools
+- Jupyter Notebook: Used for querying, analyzing, and visualizing data in Python. Chosen for its flexibility and because I'm comfortable working in it.
+- Pandas: For grouping, joining, and aggregating data.
+- Matplotlib & Seaborn: For visualizing purchase patterns.
+
+## Section 4: Workflow & Logic
+- Connect to the Data Warehouse using sqlite3.
+- Load and join tables: customers, products, and sales data.
+- Group by customer and product.
+- Sum the sale_amount to calculate total purchases.
+- Sort the results to highlight high-spending customers.
+- Visualize the data with tables and bar charts.
+- Key dimensions:
+  - Customer
+  - Product
+- Key aggregation:
+  - SUM of sale_amount
+
+## Section 5: Results
+- Customers 1001 and 1010 spent the most across multiple products.
+- The 'laptop' product stands out as the highest total spend among customers.
+
+Screenshot of OLAP Result
+
+![OLAP Result](screenshots/olap_query_visualization.png)
+(This chart shows total purchase amount per customer by product.)
+
+## Section 6: Suggested Business Action
+- Target high-spending customers with loyalty rewards or personalized offers.
+- Bundle frequently purchased products or recommend similar items to increase average order size.
+- Use purchase trends to improve inventory and campaign planning.
+
+## Section 7: Challenges
+- I initially considered using Power BI, but opted for Jupyter due to familiarity and control over data manipulation.
+- Took extra care to ensure join logic and aggregations were correct.
+- Making the visualS easy to read required a few formatting tweaks with pivot tables and bar charts.
 
 
 
