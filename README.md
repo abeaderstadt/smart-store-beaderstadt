@@ -67,47 +67,47 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
   Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
   - Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 
-        ## Task 1: Plan Your Project
-        - Before you start coding, spend some time planning your project. 
-        - We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
+      ## Task 1: Plan Your Project
+      - Before you start coding, spend some time planning your project. 
+      - We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
 
 
-        ## Task 2: Complete/Verify Initialization
-        - Follow the above step-by-step instructions to initialize a new Python project.
-        - Hint: you should have both a GitHub repo (which you created with a default README.md) and have cloned it down to your machine, added useful files, done a git add-commit-push to GitHub and created a project virtual environment for Python. 
+      ## Task 2: Complete/Verify Initialization
+      - Follow the above step-by-step instructions to initialize a new Python project.
+      - Hint: you should have both a GitHub repo (which you created with a default README.md) and have cloned it down to your machine, added useful files, done a git add-commit-push to GitHub and created a project virtual environment for Python. 
 
-        ## Task 3: Organize Your Project Folder
-        - Open the project in VS Code or use your computer's file management program to organize your project professionally. For now, just organize the project this way. Files will be mostly empty - we'll add contents later.
+      ## Task 3: Organize Your Project Folder
+      - Open the project in VS Code or use your computer's file management program to organize your project professionally. For now, just organize the project this way. Files will be mostly empty - we'll add contents later.
 
-        smart-store-yourname/   
-        │
-        ├── data/                
-        │   ├── raw/                          
-        │
-        ├── scripts/                            
-        │
-        ├── utils/                     
-        │   └── logger.py              
-        │
-        ├── .gitignore                 
-        ├── README.md                  
-        └── requirements.txt     
+      smart-store-yourname/   
+      │
+      ├── data/                
+      │   ├── raw/                          
+      │
+      ├── scripts/                            
+      │
+      ├── utils/                     
+      │   └── logger.py              
+      │
+      ├── .gitignore                 
+      ├── README.md                  
+      └── requirements.txt     
 
-        - First, create the folders. Follow capitalization (all lower case), spelling, and spacing, EXACTLY. 
-        - In your project repository, create the data folder first as show above. In the data folder, create a folder named raw (if it doesn't exist yet). 
+      - First, create the folders. Follow capitalization (all lower case), spelling, and spacing, EXACTLY. 
+      - In your project repository, create the data folder first as show above. In the data folder, create a folder named raw (if it doesn't exist yet). 
 
-        ## Task 4: Add Sample Data
-        - Use the sample data files provided in this repository: https://github.com/denisecase/smart-sales-raw-dataLinks to an external site. to your data/raw folder.
-        - Either download these files and put them in your data/raw folder, or create new empty files and copy and paste the contents into each. 
-        - For best results, be sure the file names are exactly the same.
-        - When finished, in your data/raw folder, you should have with some raw sample data in each:
+      ## Task 4: Add Sample Data
+      - Use the sample data files provided in this repository: https://github.com/denisecase/smart-sales-raw-dataLinks to an external site. to your data/raw folder.
+      - Either download these files and put them in your data/raw folder, or create new empty files and copy and paste the contents into each. 
+      - For best results, be sure the file names are exactly the same.
+      - When finished, in your data/raw folder, you should have with some raw sample data in each:
 
-            - customers_data.csv
-            - products_data.csv
-            - sales_data.csv
+          - customers_data.csv
+          - products_data.csv
+          - sales_data.csv
 
-        ## Task 5: Explore the Data
-        - Before using tools, examine the data manually. Open the CSV files and make a few observations:
+      ## Task 5: Explore the Data
+      - Before using tools, examine the data manually. Open the CSV files and make a few observations:
 
 ---
 
