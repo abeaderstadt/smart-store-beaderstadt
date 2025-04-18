@@ -244,9 +244,9 @@ sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_a
 
 ##  Visualizations
 
-### 1. Total Spend by Customer on Each Product  
+### 1. Total Spend by Customers on Each Product  
 ![Total Spend by Customer on Each Product](screenshots/bar_total_spend_by_customer_and_product.png)  
-_This bar chart displays the total purchase amount per customer, broken down by product._
+_This bar chart displays the total purchase amount of all customers, broken down by product._
 
 ---
 
@@ -256,15 +256,15 @@ _This heatmap provides a visual overview of how much each customer has spent acr
 
 ---
 
-### 3. Daily Sales Trend for a Specific Product  
+### 3. Daily Sales Trend for Products  
 ![Daily Sales Trend for a Specific Product](screenshots/line_daily_sales_by_product.png)  
-_This line graph shows daily sales trends for a selected product within a specific month._
+_This line graph shows daily sales trends for all products within a specific month._
 
 ---
 
 ### 4. Customer Spend on Laptops  
 ![Customer Spend on Laptops](screenshots/bar_customer_spend_on_laptops.png)  
-_This bar chart shows the total spend per customer specifically for laptop purchases._
+_This bar chart shows the total spend of customer specifically for laptop purchases._
 
 ---
 
