@@ -60,8 +60,8 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
   - git push -u origin main  
 ```
 
----
 
+```
   # P1 Specifications
   Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
   # Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
@@ -107,7 +107,9 @@ smart-store-yourname/
 
 ## Task 5: Explore the Data
 - Before using tools, examine the data manually. Open the CSV files and make a few observations:
----
+```
+
+```
   # P2 Specifications
   In Project 2 we continue to initialize a business intelligence data analytics project. Our goal is to get acquainted with these powerful tools and key files so we'll feel a bit more comfortable joining a Git-based team.
 
@@ -116,7 +118,9 @@ smart-store-yourname/
 - create a file named logger.py (exactly). Copy and paste the content from the starter repo linked above. 
 - In VS Code, use File / New Folder to create a new folder named scripts to hold your scripts.
 - create a file named data_prep.py (exactly).  Copy and paste the content from the starter repo linked above. 
----
+```
+
+```
    # P3 Specifications
    In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
  ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
@@ -134,7 +138,9 @@ smart-store-yourname/
 - Now that we've verified these methods, we can run the data_prep.py script that cleans and prepares the data.
 - Use the terminal to run the data_prep.py script.
 - py scripts\data_prep.py
-- ---
+```
+
+```
    # P4 Specifications
    In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
    We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
@@ -154,7 +160,9 @@ smart-store-yourname/
 - Use the terminal to run the etl_to_dw.py file.
 - py scripts/dw_scripts/etl_to_dw.py
 - Ensure the schema is correctly implemented and that the structure meets your design expectations. 
-- - ---
+```
+
+```
    # P5 Specifications
    In Project 5, we will use Power BI Desktop to apply core BI techniques (slicing, dicing, and drilldown) and generate interactive visualizations to explore business performance. This project reinforces key data analysis and reporting skills used across industries.
 
@@ -182,7 +190,9 @@ smart-store-yourname/
 
 ### Final Dashboard
 ![Final Dashboard](screenshots/dashboard.png)
-- - ---
+```
+
+```
    # P6 Specifications
    In Project 6, we explored OLAP (Online Analytical Processing) techniques to better understand customer purchasing behavior. This notebook based project focused on querying a data warehouse and analyzing spending patterns by customer and product.
 
@@ -240,6 +250,6 @@ Screenshot of OLAP Result
 - I initially considered using Power BI, but opted for Jupyter due to familiarity and control over data manipulation.
 - Took extra care to ensure join logic and aggregations were correct.
 - Making the visualS easy to read required a few formatting tweaks with pivot tables and bar charts.
-
+```
 
 
