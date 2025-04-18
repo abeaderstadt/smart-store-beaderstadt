@@ -5,7 +5,7 @@
 
 Project 6 focuses on using OLAP techniques like slicing, dicing, and drilldown to uncover specific analytic insights for a particular business objective.
 
-'''
+```
 ## **How to Install and Run the Project**
 ---
 ### **Step 1. Create a New Repo in GitHub**
@@ -58,7 +58,7 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
   - git add .    
   - git commit -m "Add your unique message here." 
   - git push -u origin main  
-'''
+```
 
 ---
 
