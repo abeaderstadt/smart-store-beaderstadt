@@ -242,10 +242,42 @@ sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_a
 - Customers 1001 and 1010 spent the most across multiple products.
 - The 'laptop' product stands out as the highest total spend among customers.
 
-Screenshot of OLAP Result
+##  Visualizations
 
-![OLAP Result](screenshots/olap_query_visualization.png)
-(This chart shows total purchase amount per customer by product.)
+### 1. Total Spend by Customer on Each Product  
+![Total Spend by Customer on Each Product](screenshots/bar_total_spend_by_customer_and_product.png)  
+_This bar chart displays the total purchase amount per customer, broken down by product._
+
+---
+
+### 2. Heatmap of Customer Spend by Product  
+![Heatmap of Customer Spend by Product](screenshots/heatmap_customer_product_spend.png)  
+_This heatmap provides a visual overview of how much each customer has spent across all product types._
+
+---
+
+### 3. Daily Sales Trend for a Specific Product  
+![Daily Sales Trend for a Specific Product](screenshots/line_daily_sales_by_product.png)  
+_This line graph shows daily sales trends for a selected product within a specific month._
+
+---
+
+### 4. Customer Spend on Laptops  
+![Customer Spend on Laptops](screenshots/bar_customer_spend_on_laptops.png)  
+_This bar chart shows the total spend per customer specifically for laptop purchases._
+
+---
+
+### 5. Grouped Laptop Purchase Analysis  
+![Grouped Laptop Purchase Analysis](screenshots/grouped_laptop_purchase_analysis.png)  
+_This screenshot shows the grouped and aggregated data used to analyze laptop purchases by customer._
+
+---
+
+### 6. Pivot Table Script (OLAP Logic)  
+![Pivot Table Script](screenshots/pivot_table_script.png)  
+_This shows the pivot table code that powers the OLAP query to analyze total spend per customer and product._
+
 
 ## Section 6: Suggested Business Action
 - Target high-spending customers with loyalty rewards or personalized offers.
