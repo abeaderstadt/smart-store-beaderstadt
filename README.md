@@ -64,7 +64,7 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
   # P1 Specifications
   Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
-  # Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
+    Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
 ---
 ## Task 1: Plan Your Project
 - Before you start coding, spend some time planning your project. 
