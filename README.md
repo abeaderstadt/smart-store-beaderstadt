@@ -62,11 +62,11 @@ IMPORTANT: Replace the commit message with a clear and descriptive note about wh
 
 ---
 
- # **P1: Specifications **
+ # P1: Specifications
 
   Project 1 is a hands-on project, that follows professional practices for starting a business intelligence data analytics project. Our project will evolve over time, so we want a place to keep it safe - backed up and ready for sharing or presenting our work. For that, we'll use GitHub, a popular place for storing code.
   - Link to starter repo: https://github.com/denisecase/smart-sales-starter-files/
----
+
 ## Task 1: Plan Your Project
 - Before you start coding, spend some time planning your project. 
 - We will start with a common business insight: https://github.com/denisecase/smart-sales-analysis-goals/blob/main/example_bi_goals/1-CUSTOMER_TOTAL_REVENUE.md
@@ -112,6 +112,7 @@ smart-store-yourname/
 ---
 
   # P2 Specifications
+
   In Project 2 we continue to initialize a business intelligence data analytics project. Our goal is to get acquainted with these powerful tools and key files so we'll feel a bit more comfortable joining a Git-based team.
 
 ## Task 6: Add Utility & Script Files
@@ -123,6 +124,7 @@ smart-store-yourname/
 ---
 
    # P3 Specifications
+
    In Project 3, we'll focus on using raw data and cleaning methods. The data we'll be working with has already been partially cleaned in previous projects. The aim is to get the data into a clean, consistent format, laying the groundwork for the more complex analytics tasks ahead. This ensures that the insights we generate are built on accurate and trustworthy data.
  ## Task 7: Practice Reusable Cleaning with a DataScrubber Class
  - Create the following file in your project: scripts/data_scrubber.py 
@@ -143,6 +145,7 @@ smart-store-yourname/
 ---
 
    # P4 Specifications
+
    In Project 4, we design and implement a data warehouse  structure that optimizes data retrieval and scalability. 
    We will build the schema, load the cleaned data, and validate the structure. This prepares us for advanced business intelligence tasks and data-driven decision-making.
 ## Task 10:  Plan Your Data Warehouse
@@ -165,6 +168,7 @@ smart-store-yourname/
 ---
 
    # P5 Specifications
+
    In Project 5, we will use Power BI Desktop to apply core BI techniques (slicing, dicing, and drilldown) and generate interactive visualizations to explore business performance. This project reinforces key data analysis and reporting skills used across industries.
 
    ### SQL Queries & Reports
@@ -195,6 +199,7 @@ smart-store-yourname/
 ---
 
    # P6 Specifications
+   
    In Project 6, we explored OLAP (Online Analytical Processing) techniques to better understand customer purchasing behavior. This notebook based project focused on querying a data warehouse and analyzing spending patterns by customer and product.
 
 ## Section 1: The Business Goal
