@@ -3,7 +3,7 @@
 
 ## Overview
 
-Project 6 focuses on leveraging OLAP, cubing concepts, and techniques like slicing, dicing, and drilldown to uncover specific analytic insights for a particular business objective.
+Project 6 focuses on using OLAP techniques like slicing, dicing, and drilldown to uncover specific analytic insights for a particular business objective.
 
 ---
 ## **How to Install and Run the Project**
