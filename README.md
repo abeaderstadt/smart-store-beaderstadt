@@ -1,9 +1,9 @@
 # smart-store-beaderstadt
-# Project 6 - BI Insights and Storytelling
+# Project 7 OLAP Analysis: Finding the Most Profitable Day of the Week for Sales
 
 ## Overview
 
-Project 6 focuses on using OLAP techniques like slicing, dicing, and drilldown to uncover specific analytic insights for a particular business objective.
+The goal of this project is to use OLAP techniques to analyze sales data and identify which day of the week consistently drives the highest revenue. By slicing and dicing the data by day, product category, and customer activity, we aim to uncover patterns that can support smarter business decisions like when to schedule more staff or launch targeted promotions.
 
 ```
 ## **How to Install and Run the Project**
@@ -295,8 +295,6 @@ _This shows the pivot table code that powers the OLAP query to analyze total spe
    
    In Project 7, we explored OLAP (Online Analytical Processing) techniques to identify the most profitable day of the week for sales.
 
-# Project README
-
 ## Section 1. The Business Goal
 The primary goal of this analysis is to determine **which product categories drive the most weekly revenue** and **identify key trends in sales patterns**. By analyzing weekly sales data, the project aims to provide actionable insights into sales performance by category, which can help in optimizing inventory management and promotional strategies.
 
@@ -342,7 +340,7 @@ sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_a
 
 ## Section 5. Results (Narrative + Visualizations)
 ### Narrative:
-- Thursday stands out as the top performing sales day, especially in the Electronics category with laptops driving the majority of revenue.High value customers like 1001 and 1010 contribute significantly to Thursday’s sales, making them strong candidates for personalized promotions or loyalty efforts.The weekly sales trends clearly indicate that Electronics is the dominant category, consistently driving the most revenue. This aligns with the earlier analysis of product performance on Thursdays.
+- Thursday stands out as the top performing sales day, especially in the Electronics category with laptops driving the majority of revenue. High value customers like 1001 and 1010 contribute significantly to Thursday’s sales, making them strong candidates for personalized promotions or loyalty efforts. The weekly sales trends clearly indicate that Electronics is the dominant category, consistently driving the most revenue. This aligns with the earlier analysis of product performance on Thursdays.
 
 ### Visualizations:
 ![Total Sales by Day of Week](screenshots/total_sales_by_day_of_week.png)
