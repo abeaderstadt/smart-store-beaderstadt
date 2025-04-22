@@ -289,5 +289,94 @@ _This shows the pivot table code that powers the OLAP query to analyze total spe
 - Took extra care to ensure join logic and aggregations were correct.
 - Making the visualS easy to read required a few formatting tweaks with pivot tables and bar charts.
 
+---
 
+   # P7 Specifications
+   
+   In Project 7, we explored OLAP (Online Analytical Processing) techniques to identify the most profitable day of the week for sales.
+
+# Project README
+
+## Section 1. The Business Goal
+The primary goal of this analysis is to determine **which product categories drive the most weekly revenue** and **identify key trends in sales patterns**. By analyzing weekly sales data, the project aims to provide actionable insights into sales performance by category, which can help in optimizing inventory management and promotional strategies.
+
+## Section 2. Data Source
+- Prepared data from my SQLite3 data warehouse, which was designed and loaded in Project 4 was used.
+The primary table used was:
+sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_amount, sale_date, discount_percentage, and state.
+- focused on:
+  - customer_id
+  - product_id
+  - sale_amount (used as the total dollar amount for each purchase)
+  - sale_date
+- joined with:
+  - customers_df: to retrieve customer information
+  - products_df: to retrieve product information
+- The data is covering a period from January 2024 to October 2024. The specific fields used include:
+    - `year_week`: Date range for the week
+    - `category`: Product category (Electronics, Clothing, Sports)
+    - `sale_amount`: Total sales amount for each category in a given week
+
+## Section 3. Tools Used
+- Jupyter Notebook: Used for querying, analyzing, and visualizing data in Python. Chosen for its flexibility and because I'm comfortable working in it.
+- Pandas: For grouping, joining, and aggregating data.
+- Matplotlib & Seaborn: For visualizing purchase patterns.
+
+## Section 4. Workflow & Logic
+
+1. **Data Import & Preprocessing**:
+- Connect to the Data Warehouse using sqlite3.
+- Load and join tables: customers, products, and sales data.
+- `category` and `sale_amount` were extracted for analysis.
+
+2. **Analysis**:
+   - The data was aggregated by product category and week to calculate the total sales per category.
+   - The analysis focused on identifying patterns and trends, such as which categories had the highest sales during specific weeks.
+   
+3. **Visualization**:
+   - A bar plot was created to visually represent total sales by category across different weeks.
+   - Additional visualizations were made to highlight trends over time, focusing on weekly sales data.
+
+4. **Interpretation**:
+   - Weekly sales trends were analyzed to determine which categories consistently performed well, and where opportunities for improvement or targeted actions lie.
+
+## Section 5. Results (Narrative + Visualizations)
+### Narrative:
+- Thursday stands out as the top performing sales day, especially in the Electronics category with laptops driving the majority of revenue.High value customers like 1001 and 1010 contribute significantly to Thursday’s sales, making them strong candidates for personalized promotions or loyalty efforts.The weekly sales trends clearly indicate that Electronics is the dominant category, consistently driving the most revenue. This aligns with the earlier analysis of product performance on Thursdays.
+
+### Visualizations:
+![Total Sales by Day of Week](screenshots/total_sales_by_day_of_week.png)
+*Figure: Total sales by day of week.*
+
+![Sales by Day of Week and Product Category](screenshots/day_of_week_sales_by_category.png)
+*Figure: Sales by Day of Week and Category.*
+
+![Weekly Sales by Category](screenshots/customer_sales_category_day.png)
+*Figure: Total weekly sales per product category.*
+
+![Weekly Sales by Category](screenshots/weekly_sales_by_category.png)
+*Figure: Total weekly sales per product category.*
+
+## Section 6. Suggested Business Action
+- Top Sales Day: Thursday consistently delivers the highest sales volume, especially in Electronics. Consider making this a focus for future product drops or campaigns.
+
+- Customer Behavior: Customers 1001 and 1010 show consistent high spending. Target these repeat buyers with exclusive deals, loyalty perks, or early access to new releases.
+
+- Product Performance: Laptops are the top product by far, followed by clothing items like jackets and hoodies. These should be considered in future bundles or promotional offers.
+
+Actionable Next Steps:
+
+  - Launch Thursday focused promotions that align with high customer traffic.
+
+  - Personalize offers to high value customers using past purchase data.
+
+  - Monitor seasonal dips and spikes to time sales more effectively and optimize stock.
+
+  - Increase exclusive deals on electronics to boost sales since Electronics consistently performs well, especially during high revenue weeks.
+
+## Section 7. Challenges
+- **Time Constraints**: Due to time limitations, the analysis focused on a broad overview rather than in depth category level breakdowns, which could have provided more insights.
+
+## Section 8. Ethical Considerations
+- The business can use the insights from this analysis to target high value customers and optimize product offerings. However, these actions should be taken with consideration of fairness and transparency. For example, personalized marketing campaigns should avoid being overly intrusive, and discounts should not disadvantage certain customer groups. Additionally, the business should be mindful of the ethical implications of automated decisions such as targeting, price optimization, and promotional offers.
 
