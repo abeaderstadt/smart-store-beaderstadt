@@ -351,8 +351,17 @@ sales_df : includes sale_id, customer_id, product_id, store_id, campaign, sale_a
 ![Sales by Day of Week and Product Category](screenshots/day_of_week_sales_by_category.png)
 *Figure: Sales by Day of Week and Category.*
 
-![Weekly Sales by Category](screenshots/customer_sales_category_day.png)
-*Figure: Total weekly sales per product category.*
+![Customer Contributions by Day of Week and Category](screenshots/customer_sales_category_day.png)
+*Figure: Total sales per customer by day and product category.*
+
+![Top Thursday Products](screenshots/top_products_thursday.png)
+*Figure: Top Products Sold on Thursdays.*
+
+![Top Thursday Categories](screenshots/top_categories_thursday.png)
+*Figure: Top Selling Categories on Thursdays.*
+
+![Top Thursday Customers](screenshots/top_customers_thursday.png)
+*Figure: Top Purchasing Customers on Thursdays.*
 
 ![Weekly Sales by Category](screenshots/weekly_sales_by_category.png)
 *Figure: Total weekly sales per product category.*
